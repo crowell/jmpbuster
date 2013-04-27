@@ -84,69 +84,69 @@ int main(int argc, char**argv)
 
         switch(buff)
         {
-            case 0xe12fff10:
-                printf("%s-> [bx *%%r0] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
-                break;
 
+            case 0xe12fff10:
+                printf("%s-> [bx r0] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+            
             case 0xe12fff11:
-                printf("%s-> [bx *%%r1] found at addr %x0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r1] found at addr %x0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
                 
             case 0xe12fff12:
-                printf("%s-> [bx *%%r2 found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r2] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
                 
             case 0xe12fff13:
-                printf("%s-> [bx *%%r3] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r3] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
         
             case 0xe12fff14:
-                printf("%s-> [bx *%%r4] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r4] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
         
             case 0xe12fff15:
-                printf("%s-> [bx *%%r5] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r5] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff16:
-                printf("%s-> [bx *%%r6] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r6] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
-
             case 0xe12fff17:
-                printf("%s-> [bx *%%r7] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r7] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff18:
-                printf("%s-> [bx *%%r8] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r8] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff19:
-                printf("%s-> [bx *%%r9] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx r9] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff1a:
-                printf("%s-> [bx *%%sl] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx sl] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff1b:
-                printf("%s-> [bx *%%fp] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx fp] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff1c:
-                printf("%s-> [bx *%%ip] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx ip] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff1d:
-                printf("%s-> [%sbx *%%sp%s] found at addr %s0x%.8x%s\n", BOLD, YELLOW, NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [%sbx sp%s] found at addr %s0x%.8x%s\n", BOLD, YELLOW, NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff1e:
-                printf("%s-> [bx *%%lr] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx lr] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
             case 0xe12fff1f:
-                printf("%s-> [bx *%%pc] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [bx pc] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
         }
