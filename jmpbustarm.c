@@ -23,13 +23,13 @@ int main(int argc, char**argv)
     unsigned char* code;
     int i, fd, text_offset, code_size;
 
-    u32 buff; //bx is a 32 bits 
+    u32 buff; //bx is a 32 bits, as is blx 
     u32 addr;
     Elf32_Ehdr elfhdr;
     Elf32_Phdr p_hdr;
     Elf32_Shdr s_hdr;
 
-    printf("** JMP buster - Tool for searching registers BX inside an executable file\n"
+    printf("** JMP buster - Tool for searching registers BX/BLX inside an executable file\n"
             "by BlackLight, released under GNU GPL license v.3, 2009\n"
             "ARM haxx by Jeffrey Crowell\n");
     if(!argv[1])
@@ -149,7 +149,71 @@ int main(int argc, char**argv)
                 printf("%s-> [bx pc] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
 
-        }
+             case 0xe12fff30:
+                printf("%s-> [blx r0] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+            
+            case 0xe12fff31:
+                printf("%s-> [blx r1] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+                
+            case 0xe12fff32:
+                printf("%s-> [blx r2] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+                
+            case 0xe12fff33:
+                printf("%s-> [blx r3] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+        
+            case 0xe12fff34:
+                printf("%s-> [blx r4] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+        
+            case 0xe12fff35:
+                printf("%s-> [blx r5] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff36:
+                printf("%s-> [blx r6] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff37:
+                printf("%s-> [blx r7] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff38:
+                printf("%s-> [blx r8] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff39:
+                printf("%s-> [blx r9] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff3a:
+                printf("%s-> [blx sl] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff3b:
+                printf("%s-> [blx fp] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff3c:
+                printf("%s-> [blx ip] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff3d:
+                printf("%s-> [%sblx sp%s] found at addr %s0x%.8x%s\n", BOLD, YELLOW, NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff3e:
+                printf("%s-> [blx lr] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+            case 0xe12fff3f:
+                printf("%s-> [blx pc] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                break;
+
+       }
     }
     close(fd);
     return 0;
