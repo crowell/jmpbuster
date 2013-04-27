@@ -68,7 +68,7 @@ int main(int argc, char**argv)
                 break;
 
             case 0xe1ff:
-                printf("%s-> [jmp *%%ecx] found at addr %x0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
+                printf("%s-> [jmp *%%ecx] found at addr %s0x%.8x%s\n", NORMAL, GREEN, addr, NORMAL);
                 break;
                 
             case 0xe2ff:
