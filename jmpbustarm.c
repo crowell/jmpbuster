@@ -20,7 +20,7 @@ typedef unsigned long int u32;
 int main(int argc, char**argv)
 {
     char* file;
-    u32* code;
+    unsigned char* code;
     int i, fd, text_offset, code_size;
 
     u32 buff; //bx is a 32 bits 
@@ -50,11 +50,11 @@ int main(int argc, char**argv)
 
     lseek(fd, elfhdr.e_phoff, SEEK_SET);
     addr = elfhdr.e_entry;
-    text_offset = addr - 0x08048000;
+    text_offset = addr - 0x00008000;
 
     lseek(fd, text_offset, SEEK_SET);
     
-    code = (u32*) malloc(code_size);
+    code = (char*) malloc(code_size);
     memset(code, 0x0, code_size);
     read(fd, code, code_size);
 
