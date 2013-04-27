@@ -53,7 +53,7 @@ int main(int argc, char**argv)
 
     lseek(fd, text_offset, SEEK_SET);
     
-    code = (unsigned char*) malloc(code_size);
+    code = (char*) malloc(code_size);
     memset(code, 0x0, code_size);
     read(fd, code, code_size);
 
