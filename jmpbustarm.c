@@ -34,7 +34,7 @@ int main(int argc, char**argv)
             "ARM haxx by Jeffrey Crowell\n");
     if(!argv[1])
     {
-        printf("Usage: %s <executable_file>\n", argv[1]);
+        printf("Usage: %s <executable_file>\n", argv[0]);
         exit(1);
     }
 

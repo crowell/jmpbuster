@@ -33,7 +33,7 @@ int main(int argc, char**argv)
             "by BlackLight, released under GNU GPL license v.3, 2009\n\n");
     if(!argv[1])
     {
-        printf("Usage: %s <executable_file>\n", argv[1]);
+        printf("Usage: %s <executable_file>\n", argv[0]);
         exit(1);
     }
 
