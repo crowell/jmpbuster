@@ -3,3 +3,6 @@ x86:
 
 arm:
 	gcc jmpbustarm.c -o jmpbustarm
+
+clean:
+	rm jmpbuster jmpbustarm
